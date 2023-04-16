@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 使用for循环求出同学们平均年龄[15,19,21,33,18,24] -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 声明变量
+        let sum = 0;
+        // 声明数组
+        let arr = [15, 19, 21, 33, 18, 24];
+        // 遍历循环
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        document.write(`班级里同学们的平均年龄为：${parseInt(sum/arr.length)}岁`);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

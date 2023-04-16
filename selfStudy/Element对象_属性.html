@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .box1 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="root">Hello</div>
+    <script>
+        var root = document.getElementById("root")
+        root.id = "roots"
+        root.className = "box box1"
+        root.classList.add("mybox")
+        root.classList.remove("box")
+        if (root.classList.contains("box1")) {
+            console.log("有");
+        } else {
+            console.log("没有");
+        }
+        root.classList.toggle("box") //有则删除，没有则添加
+        console.log(root.innerHTML = "大家好吖"); //修改or读取
+        console.log(root.innerText = "哇哈哈"); //修改or读取
+        //innerHTML和innerText的区别：
+        // innerHTML可以识别标签
+        // innerText会把标签识别成一个字符串
+        var str = "<a href='http://www.baidu.com'>百度</a>"
+            // root.innerHTML = str
+        root.innerText = str
+    </script>
+</body>
+
+</html>

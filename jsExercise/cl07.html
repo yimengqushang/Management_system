@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 简易购物车 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function jisuan() {
+            //1、获取文本框中单价的值
+            var dj = parseFloat(document.all.danjia.value);
+            //2、获取文本框中数量的值
+            var sl = parseFloat(document.all.shuliang.value);
+            //3、计算二者的乘积，赋给总价
+            var zj = dj * sl;
+            //4、将总价的结果再次赋给文本框进行显示
+            document.all.zongjia.value = zj;
+        }
+    </script>
+    <style type="text/css">
+        h1 {
+            text-align: center;
+        }
+        
+        input {
+            width: 80px;
+        }
+        
+        .title {
+            background-color: #66CCFF;
+        }
+        
+        table {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>简易购物车</h1>
+    <hr/>
+    <table border="1" cellspacing="0" cellpadding="0" align="center" width="600px">
+        <tr class="title">
+            <td>编号</td>
+            <td>名称</td>
+            <td>单价（元）</td>
+            <td>数量</td>
+            <td>总价</td>
+            <td>计算</td>
+        </tr>
+        <tr>
+            <td>A-01</td>
+            <td>ThinkPad SL300</td>
+            <td><input type="text" id="danjia"></td>
+            <td><input type="text" id="shuliang"></td>
+            <td><input type="text" id="zongjia"></td>
+            <td><input type="button" value="计算价格" onclick="jisuan()"></td>
+        </tr>
+    </table>
+</body>
+
+</html>

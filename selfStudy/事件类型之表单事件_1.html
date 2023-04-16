@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="username">
+    <input type="text" id="password">
+    <script>
+        //input事件：会连续触发
+        var username = document.getElementById("username");
+        username.oninput = function(e){
+            console.log(e.target.value);//读取数据
+        }
+        //select事件：在<input>、<textarea>中选中文本时触发
+        var username = document.getElementById("username");
+        username.onselect = function(){
+            console.log("选中了");
+        }
+
+        //失去焦点和回车的时候触发
+        var password = document.getElementById("password");
+        password.onchange = function(e){
+            console.log(e.target.value);
+        }
+    </script>
+</body>
+</html>

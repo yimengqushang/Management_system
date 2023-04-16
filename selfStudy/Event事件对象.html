@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .root {
+            width: 200px;
+            height: 200px;
+            background-color: #9999;
+        }
+        
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+    <a href="http://www.baidu.com" id="it">itbaizhan</a>
+    <div class="root" id="root">
+        <div class="box" id="box"></div>
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        //Event事件对象，其实就是参数
+        btn.onclick = function(event) {
+                // console.log(event);
+                event.target.innerHTML = "点击之后" //target获取当前元素
+                console.log(event.type); //type表示所对应的事件
+            }
+            // Event.preventDefault方法取消浏览器对当前事件的默认行为。
+        var it = document.getElementById("it");
+        it.onclick = function(e) {
+                e.preventDefault()
+                console.log("点击了A");
+            }
+            // Event.stopPropagation方法阻止事件在DOM中继续传播(阻止事件冒泡)
+        var root = document.getElementById("root");
+        var box = document.getElementById("box");
+
+        root.onclick = function() {
+            console.log("root");
+        }
+        box.onclick = function(e) {
+            e.stopPropagation();
+            console.log("box");
+        }
+    </script>
+</body>
+
+</html>

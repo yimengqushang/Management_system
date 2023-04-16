@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="nav">导航</div>
+
+    <div id="container"></div>
+    <script>
+        //创建新标签
+        var text = document.createElement("p")
+            //创建新文本
+        var content = document.createTextNode("我是文本")
+            //appendChild：将内容或者子元素放到容器中
+        text.appendChild(content)
+            //创建新属性
+        var id = document.createAttribute("id")
+            //给新属性赋值
+        id.value = "root"
+            //把新属性放到新标签里
+        text.setAttributeNode(id)
+            // console.log(text);
+            // console.log(content);
+            // console.log(id);
+        console.log(text);
+
+        //将内容放到网页
+        var container = document.getElementById("container");
+        // console.log(container);
+        container.appendChild(text)
+    </script>
+</body>
+
+</html>

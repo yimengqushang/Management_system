@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            /* 表格内边距 */
+            padding: 0;
+        }
+        
+        table {
+            margin: 0 auto;
+            text-align: center;
+            /*border-collapse表示边框是否合并，默认不合并*/
+            border-collapse: collapse;
+        }
+        
+        table th,
+        td {
+            border: 1px solid #000;
+            padding: 15px;
+        }
+        
+        table caption {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 隐式转换，+作为正号解析可以转换成Number类型
+        var danjia = +prompt('请输入商品价格');
+        var shuliang = +prompt('请输入商品数量');
+        var address = prompt('请输入收货地址');
+        var zongjia = danjia * shuliang;
+        // document.write('商品价格:' + danjia + ',商品数量:' + shuliang + ',商品总价:' + zongjia + ',收货地址:' + address)
+        document.write(`
+        <table>
+        <caption>
+            <h2>订单确认</h2>
+        </caption>
+        <tr>
+            <th>商品名称</th>
+            <th>商品价格</th>
+            <th>商品数量</th>
+            <th>总价</th>
+            <th>收货地址</th>
+        </tr>
+        <tr>
+            <td>小米手机青春plus</td>
+            <td>${danjia}元</td>
+            <td>${shuliang}</td>
+            <td>${zongjia}元</td>
+            <td>${address}</td>
+        </tr>
+    </table>`)
+    </script>
+</body>
+
+</html>

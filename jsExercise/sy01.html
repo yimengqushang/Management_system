@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;" charset="gb2312">
+    <title>验证电子邮件地址</title>
+    <script language="javascript">
+        function check(obj) { //检验文本框中电子邮件地址格式是否合法
+            var emailUrl = obj.email.value; //构造正则表达式进行检验
+            var regex = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(\.[a-zA-Z0-9_-])+/;
+            if (!regex.exec(emailUrl)) { //取得用户的输入
+                alert("您输入的格式有误，可能您忘记了@符号或是点号！请重新输入");
+                obj.email.focus() //取得焦点
+            } else {
+                alert("输入正确！"); //通过验证
+                return true; //提交表单
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <p>验证电子邮件地址合法性</p>
+        <form onsubmit="returncheck(this);" name="form1">
+            <input type="text" name="email">
+            <input type="submit" value="确定">
+        </form>
+    </center>
+</body>
+
+</html>

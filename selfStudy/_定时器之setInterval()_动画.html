@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#someDiv{
+				width: 100px;
+				height: 100px;
+				background: red;
+				/*透明度：opacity；取值范围0~1*/
+				opacity: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="someDiv"></div>
+		<script type="text/javascript">
+			 var div = document.getElementById("someDiv");
+			 var opacity = 1;
+			 var fade = setInterval(function(){
+			 	
+			 	if(opacity>0){
+			 		opacity -= 0.05
+			 		div.style.opacity = opacity
+			 	}else{
+			 		clearInterval(fade);//清除掉定时器
+			 	}
+			 },60)
+		</script>
+	</body>
+</html>
