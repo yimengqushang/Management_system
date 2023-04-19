@@ -1,0 +1,56 @@
+/* CSS Document */
+body,ul,li,td,th{
+    margin:0;
+    padding:0;
+    list-style-type: none;
+	font-size:14pt;
+	font-family:"楷体";
+}
+a:link,a:visited,a:hover,a:active {
+	text-decoration: none;
+}
+th {
+    background-color: #e0e0e0;
+}
+th,td {
+    height:40px;
+	border: 1px solid #CCCCCC;
+    text-align: center;
+}
+
+
+.header{
+    width:1260px;
+    height:100px;
+    background: url(images/topbanner.jpg);
+    margin:0 auto;
+}
+.nav ul{
+    margin:0 auto;
+    width:1260px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+}
+.nav li {
+    width:140px;
+    float:left;
+}
+h1 {
+    margin-top:10px;
+    margin-bottom:10px;
+    text-align: center;
+}
+.table {
+    width:1260px;
+    margin:0 auto;
+}
+.table th a {
+    color:skyblue;
+}
+.footer{
+    margin:20px auto;
+    width:1260px;
+    height:60px;
+    background: url(images/bottombanner.jpg);
+}
